@@ -270,6 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then((res) => {
             console.log('Email sent successfully:', res);
             alert('Exam results have been sent to your email!');
+             window.location.href = 'completed.html'
         })
         .catch((err) => {
             console.error('Failed to send email:', err);
@@ -278,28 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 
-    // function showExamResult() {
-          
-         
-    //        const params = JSON.parse(sessionStorage.getItem('loggedInUser'));
-    //        const serviceID = "mcq_exam_2024"; 
-    //        const templateID = "template_h4s39jc";
-    //       const html=scores.html;
-    //       const css=scores.html;
-    //       const javascript=scores.html;
-          
-
-    //        emailjs.send(serviceID, templateID, params, html,css,javascript)
-    //     .then((res) => {
-    //         console.log('Email sent successfully:', res.JSON);
-    //         alert('Exam results have been sent to your email!');
-    //     })
-    //     .catch((err) => {
-    //         console.error('Failed to send email:', err);
-    //         alert('Failed to send exam results. Please try again later.');
-    //     }); 
-    // }
-
+  
     function nextQuestion() {
         const selectedOption = document.querySelector(`input[name="answer"]:checked`);
         if (selectedOption) {
